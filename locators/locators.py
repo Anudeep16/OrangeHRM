@@ -15,7 +15,7 @@ class LoginLocators:
 
 class HomePageLocators:
     pim = {
-        "xpath": "(//span[contains(text(),'')])[2]"
+        "xpath": "//span[normalize-space()='PIM']"
     }
     emp_id={
         "xpath":"//div//label[contains(text(),'Employee Id')]//following::input[1]"
@@ -29,7 +29,7 @@ class HomePageLocators:
             "//div[@role='table']//div[contains(text(),'0304')]//following::div[2][contains(text(),'Rahul')]"
     }
     add_emp_btn={
-        "xpath":"//li//a[contains(text(),'Add Employee')]"
+        "xpath":"//a[normalize-space()='Add Employee']"
     }
     first_name={
         "xpath":"//div//input[@name='firstName']"
@@ -40,4 +40,6 @@ class HomePageLocators:
     last_name={
         "xpath":"//div//input[@name='lastName']"
     }
-
+    dashboard={
+        "xpath": "//h6[normalize-space()='Dashboard']"
+    }

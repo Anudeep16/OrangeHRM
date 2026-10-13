@@ -30,7 +30,7 @@ class HRM_PIMPage:
     def __init__(self, driver):
         # Encapsulate the browser and this page's locator dependencies.
         self.driver = driver
-        self.wait = WebDriverWait(driver, 15)
+        self.wait = WebDriverWait(driver, 30)
         self.login_locators = LoginLocators()
         self.homepage_locators = HomePageLocators()
 
@@ -47,7 +47,12 @@ class HRM_PIMPage:
         logger.info("Creating a new user")
         pim_ele = self.wait.until(EC.element_to_be_clickable((By.XPATH, self.homepage_locators.pim["xpath"])))
         pim_ele.click()
-        self.driver.find_element(By.XPATH, self.homepage_locators.add_emp_btn["xpath"]).click()
+        add_employee = self.wait.until(
+            EC.element_to_be_clickable(
+                (By.XPATH, self.homepage_locators.add_emp_btn["xpath"])
+            )
+        )
+        add_employee.click()
         self.driver.find_element(By.XPATH, self.homepage_locators.first_name["xpath"]).send_keys({random_f_name})
         self.driver.find_element(By.XPATH, self.homepage_locators.middle_name["xpath"]).send_keys({random_m_name})
         self.driver.find_element(By.XPATH, self.homepage_locators.last_name["xpath"]).send_keys({random_l_name})

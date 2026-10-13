@@ -30,7 +30,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest --headless
+          pytest -s -v --headless
 
 
       - name: Upload report

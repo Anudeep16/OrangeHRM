@@ -21,8 +21,9 @@ def driver(request):
     options.add_argument("--force-device-scale-factor=1")
 
     driver = webdriver.Chrome(options=options)
-    driver.maximize_window()
-    logger.info("Chrome WebDriver started and maximized")
+    if not request.config.getoption("--headless"):
+        driver.maximize_window()
+    logger.info("Chrome WebDriver started")
     # Common implicit wait for all tests using this driver
     driver.implicitly_wait(10)
 
