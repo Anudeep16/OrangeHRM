@@ -23,6 +23,9 @@ class HomePageLocators:
     search_btn={
         "xpath":"//div//button[@type='submit']"
     }
+    form_loader={
+        "css_selector":".oxd-form-loader"
+    }
     search_result={
         "xpath":
             #"(//div[@role='rowgroup'])[2]//div[2]"
@@ -39,6 +42,9 @@ class HomePageLocators:
     }
     last_name={
         "xpath":"//div//input[@name='lastName']"
+    }
+    save_btn={
+        "xpath":"//button[@type='submit' and normalize-space()='Save']"
     }
     dashboard={
         "xpath": "//h6[normalize-space()='Dashboard']"

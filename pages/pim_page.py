@@ -60,6 +60,19 @@ class HRM_PIMPage:
         self.driver.find_element(By.XPATH, self.homepage_locators.emp_id["xpath"]).send_keys(Keys.CONTROL, "a")
         self.driver.find_element(By.XPATH, self.homepage_locators.emp_id["xpath"]).send_keys(Keys.DELETE)
         self.driver.find_element(By.XPATH, self.homepage_locators.emp_id["xpath"]).send_keys(str(random_number))
-        self.driver.find_element(By.XPATH, self.homepage_locators.search_btn["xpath"]).click()
+        self.wait.until(
+            EC.invisibility_of_element_located(
+                (
+                    By.CSS_SELECTOR,
+                    self.homepage_locators.form_loader["css_selector"],
+                )
+            )
+        )
+        save_button = self.wait.until(
+            EC.element_to_be_clickable(
+                (By.XPATH, self.homepage_locators.save_btn["xpath"])
+            )
+        )
+        save_button.click()
         # Add more steps to fill in the user details and submit the form
         logger.info("New user created successfully")
