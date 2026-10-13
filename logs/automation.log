@@ -1,0 +1,1710 @@
+2026-10-13 10:12:58,591 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:12:58,773 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:13:04,776 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:13:04,781 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:13:04,786 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:13:11,494 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:13:11,495 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:13:12,239 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:13:12,239 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:13:12,380 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:13:12,702 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:13:12,909 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:13:14,704 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:13:14,706 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:13:14,724 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:13:14,757 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:13:15,320 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:13:15,322 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_login passed
+2026-10-13 10:13:15,358 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:13:19,544 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:13:19,555 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:13:21,873 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:13:21,880 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:13:21,883 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:13:28,022 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:13:28,022 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:13:29,001 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:13:29,001 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:13:29,146 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:13:29,419 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:13:29,499 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:13:29,596 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:13:29,597 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:13:29,598 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:13:30,601 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:13:30,695 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:13:30,696 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_login1 passed
+2026-10-13 10:13:30,700 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:13:33,061 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:13:33,072 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:13:36,900 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:13:36,917 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:13:36,925 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:13:41,789 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:13:41,789 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:13:42,607 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:13:42,608 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:13:42,787 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:13:43,067 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:13:43,234 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:13:43,374 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:13:43,375 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:13:43,377 | INFO | orangehrm.test_pim_search_and_create_user | Searching for user
+2026-10-13 10:13:44,052 | ERROR | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_search_user failed during call: orange_hrm_login = <selenium.webdriver.chrome.webdriver.WebDriver (session="4dfd8b28b95fb3f273f3e3d7d16abde0")>
+
+    @pytest.mark.smoke
+    def test_search_user(orange_hrm_login,):
+        logger.info("Searching for user")
+>       HRM_LoginPage(orange_hrm_login).search_user()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: 'HRM_LoginPage' object has no attribute 'search_user'
+
+tests\test_pim_search_and_create_user.py:13: AttributeError
+2026-10-13 10:13:44,064 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:13:46,543 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:13:46,556 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:13:48,307 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:13:48,319 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:13:48,320 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:13:52,299 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:13:52,300 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:13:52,916 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:13:52,917 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:13:53,070 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:13:53,324 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:13:53,429 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:13:53,526 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:13:53,526 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:13:53,529 | INFO | orangehrm.test_pim_search_and_create_user | Creating a new user
+2026-10-13 10:13:53,535 | ERROR | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_create_user failed during call: orange_hrm_login = <selenium.webdriver.chrome.webdriver.WebDriver (session="a7817b6b3503be36111cfa02380ec1fb")>
+
+    @pytest.mark.regression
+    def test_create_user(orange_hrm_login):
+        logger.info("Creating a new user")
+>       HRM_LoginPage(orange_hrm_login).create_user()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: 'HRM_LoginPage' object has no attribute 'create_user'
+
+tests\test_pim_search_and_create_user.py:20: AttributeError
+2026-10-13 10:13:53,546 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:13:55,993 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:13:56,267 | INFO | orangehrm.conftest | Pytest session finished with exit status 1
+2026-10-13 10:14:08,240 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:14:08,272 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:14:10,436 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:14:10,442 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:14:10,449 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:14:13,940 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:14:13,940 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:14:14,419 | ERROR | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_search_user failed during setup: driver = <selenium.webdriver.chrome.webdriver.WebDriver (session="0bc544501b01cedef7619bf33d7eb010")>
+request = <SubRequest 'orange_hrm_login' for <Function test_search_user>>
+
+    @pytest.fixture(scope="function")
+    def orange_hrm_login(driver, request):
+    
+        env = request.config.getoption("--env")
+        logger.info("Loading configuration for environment '%s'", env)
+        config = ConfigReader.get_config(env)
+        logger.info("Opening application URL: %s", config["url"])
+        driver.get(config["url"])
+        login_page = HRM_LoginPage(driver)
+    
+        logger.info("Starting login flow")
+>       login_page.hrm_login_page(
+            driver,
+            config["username"],
+            config["password"],
+        )
+
+conftest.py:86: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+pages\login_page.py:39: in hrm_login_page
+    self.driver.get("https://opensource-demo.orangehrmlive.com/")
+.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py:526: in get
+    self.execute(Command.GET, {"url": url})
+.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py:506: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001EA0F121FD0>
+response = {'status': 404, 'value': '{"value":{"error":"no such window","message":"no such window: target window already closed\\...fd2e4c]\\n\\tKERNEL32!BaseThreadInitThunk [0x7ffd661bcd87+17]\\n\\tntdll!RtlUserThreadStart [0x7ffd6674caec+2c]\\n"}}'}
+
+    def check_response(self, response: dict[str, Any]) -> None:
+        """Check that a JSON response from the WebDriver does not have an error.
+    
+        Args:
+            response: The JSON response from the WebDriver server as a dictionary
+                object.
+    
+        Raises:
+            WebDriverException: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                try:
+                    value = json.loads(value_json)
+                    if isinstance(value, dict):
+                        if len(value) == 1:
+                            value = value["value"]
+                        status = value.get("error", None)
+                        if not status:
+                            status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                            message = value.get("value") or value.get("message")
+                            if not isinstance(message, str):
+                                value = message
+                                message = message.get("message") if isinstance(message, dict) else None
+                        else:
+                            message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: type[WebDriverException]
+        e = ErrorCode()
+        error_codes = [item for item in dir(e) if not item.startswith("__")]
+        for error_code in error_codes:
+            error_info = getattr(ErrorCode, error_code)
+            if isinstance(error_info, list) and status in error_info:
+                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
+                break
+        else:
+            exception_class = WebDriverException
+    
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and "message" in value:
+            message = value["message"]
+    
+        screen = None  # type: ignore[assignment]
+        if "screen" in value:
+            screen = value["screen"]
+    
+        stacktrace = None
+        st_value = value.get("stackTrace") or value.get("stacktrace")
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split("\n")
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = frame.get("lineNumber", "")
+                        file = frame.get("fileName", "<anonymous>")
+                        if line:
+                            file = f"{file}:{line}"
+                        meth = frame.get("methodName", "<anonymous>")
+                        if "className" in frame:
+                            meth = f"{frame['className']}.{meth}"
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if "data" in value:
+                alert_text = value["data"].get("text")
+            elif "alert" in value:
+                alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)
+>       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+E       from unknown error: web view not found
+E         (Session info: chrome=154.0.8037.98)
+E       Stacktrace:
+E       	chromedriver!GetHandleVerifier [0x7ff66d0b9d55+5a55]
+E       	chromedriver!(No symbol) [0x7ff66cfdf540]
+E       	chromedriver!(No symbol) [0x7ff66ce045fd]
+E       	chromedriver!(No symbol) [0x7ff66cddb5d2]
+E       	chromedriver!(No symbol) [0x7ff66ce907f6]
+E       	chromedriver!(No symbol) [0x7ff66ceaf5bd]
+E       	chromedriver!(No symbol) [0x7ff66ce51a12]
+E       	chromedriver!(No symbol) [0x7ff66ce52823]
+E       	chromedriver!GetHandleVerifier [0x7ff66d4d04b1+41c1b1]
+E       	chromedriver!GetHandleVerifier [0x7ff66d4fe26b+449f6b]
+E       	chromedriver!GetHandleVerifier [0x7ff66d4f274e+43e44e]
+E       	chromedriver!GetHandleVerifier [0x7ff66d1b32fe+feffe]
+E       	chromedriver!(No symbol) [0x7ff66cfecb55]
+E       	chromedriver!(No symbol) [0x7ff66cfe7f64]
+E       	chromedriver!(No symbol) [0x7ff66cfe80f4]
+E       	chromedriver!(No symbol) [0x7ff66cfd2e4c]
+E       	KERNEL32!BaseThreadInitThunk [0x7ffd661bcd87+17]
+E       	ntdll!RtlUserThreadStart [0x7ffd6674caec+2c]
+
+.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:232: NoSuchWindowException
+2026-10-13 10:14:14,474 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:15:32,708 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:15:32,837 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:15:36,673 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:15:36,676 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:15:36,679 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:15:41,536 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:15:41,537 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:15:42,181 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:15:42,181 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:15:42,340 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:15:42,592 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:15:42,709 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:15:42,821 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:15:42,822 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:15:42,827 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:15:44,754 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:15:44,860 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:15:44,861 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_login passed
+2026-10-13 10:15:44,869 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:15:47,230 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:15:47,240 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:15:49,117 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:15:49,121 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:15:49,124 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:15:52,950 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:15:52,951 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:15:53,931 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:15:53,931 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:15:54,077 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:15:54,993 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:15:55,058 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:15:55,155 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:15:55,156 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:15:55,157 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:15:56,516 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:15:56,627 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:15:56,628 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_login1 passed
+2026-10-13 10:15:56,634 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:15:58,902 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:15:58,916 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:16:00,902 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:16:00,908 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:16:00,910 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:16:05,239 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:16:05,239 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:16:05,874 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:16:05,875 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:16:06,012 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:16:06,441 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:16:06,499 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:16:06,577 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:16:06,577 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:16:06,578 | INFO | orangehrm.test_pim_search_and_create_user | Searching for user
+2026-10-13 10:16:06,579 | INFO | orangehrm.pages.pim_page | Searching for user
+2026-10-13 10:16:10,308 | INFO | orangehrm.pages.pim_page | User search completed
+2026-10-13 10:16:10,434 | INFO | orangehrm.test_pim_search_and_create_user | Successfully searched for user and captured screenshot of search result
+2026-10-13 10:16:10,435 | INFO | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_search_user passed
+2026-10-13 10:16:10,440 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:16:12,915 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:16:12,926 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:16:14,703 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:16:14,708 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:16:14,713 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:16:23,295 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:16:23,295 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:16:23,921 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:16:23,921 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:16:24,047 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:16:24,713 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:16:24,767 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:16:24,814 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:16:24,815 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:16:24,815 | INFO | orangehrm.test_pim_search_and_create_user | Creating a new user
+2026-10-13 10:16:24,815 | INFO | orangehrm.pages.pim_page | Creating a new user
+2026-10-13 10:16:29,497 | INFO | orangehrm.pages.pim_page | New user created successfully
+2026-10-13 10:16:29,660 | INFO | orangehrm.test_pim_search_and_create_user | Successfully created a new user and captured screenshot of the process
+2026-10-13 10:16:29,661 | INFO | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_create_user passed
+2026-10-13 10:16:29,665 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:16:32,047 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:16:32,073 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:17:41,889 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:17:43,486 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:17:43,638 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:17:43,790 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:17:43,940 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:17:44,014 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:17:44,014 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:17:44,015 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:17:49,585 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:17:49,612 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:17:49,618 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:17:50,279 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:17:50,409 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:17:50,412 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:17:50,619 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:17:50,631 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:17:50,634 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:17:50,651 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:17:50,668 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:17:50,681 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:17:56,693 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:17:56,695 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:17:58,559 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:17:58,560 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:18:00,241 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:18:00,242 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:18:00,575 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:18:00,970 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:18:00,970 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:18:01,292 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:18:01,373 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:18:01,373 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:18:01,926 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:18:02,419 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:18:02,420 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:18:02,731 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:18:02,980 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:18:02,981 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:18:03,158 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:18:03,161 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:18:03,303 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:18:03,477 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:18:03,663 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:18:03,664 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:18:03,799 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:18:03,845 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:18:04,867 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:18:05,136 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:18:05,645 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:18:05,646 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:18:05,652 | INFO | orangehrm.test_pim_search_and_create_user | Searching for user
+2026-10-13 10:18:05,653 | INFO | orangehrm.pages.pim_page | Searching for user
+2026-10-13 10:18:07,012 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:18:07,013 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:18:07,061 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:18:07,077 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:18:07,078 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:18:07,087 | INFO | orangehrm.test_pim_search_and_create_user | Creating a new user
+2026-10-13 10:18:07,087 | INFO | orangehrm.pages.pim_page | Creating a new user
+2026-10-13 10:18:07,210 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:18:07,210 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:18:07,224 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:18:07,902 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:18:07,906 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:18:09,535 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:18:09,536 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_login1 passed
+2026-10-13 10:18:09,746 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:18:09,918 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:18:09,919 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_login passed
+2026-10-13 10:18:09,927 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:18:14,582 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:18:14,610 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:18:14,696 | INFO | orangehrm.pages.pim_page | User search completed
+2026-10-13 10:18:14,915 | INFO | orangehrm.test_pim_search_and_create_user | Successfully searched for user and captured screenshot of search result
+2026-10-13 10:18:14,915 | INFO | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_search_user passed
+2026-10-13 10:18:14,920 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:18:15,553 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:18:15,574 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:18:15,980 | INFO | orangehrm.pages.pim_page | New user created successfully
+2026-10-13 10:18:16,149 | INFO | orangehrm.test_pim_search_and_create_user | Successfully created a new user and captured screenshot of the process
+2026-10-13 10:18:16,150 | INFO | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_create_user passed
+2026-10-13 10:18:16,156 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:18:17,720 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:18:17,731 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:18:18,559 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:18:18,573 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:18:18,837 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:20:32,850 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:20:34,315 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:20:34,495 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:20:34,647 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:20:34,809 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:20:34,879 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:20:34,879 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:20:34,879 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:20:42,760 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:20:42,795 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:20:42,814 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:20:42,930 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:20:42,944 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:20:42,949 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:20:45,395 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:20:45,497 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:20:45,504 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:20:46,407 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:20:46,413 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:20:46,415 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:20:49,604 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:20:49,605 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:20:49,609 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:20:49,609 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:20:51,015 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:20:51,015 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:20:51,799 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:20:51,800 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:20:51,984 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:20:51,985 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:20:52,008 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:20:52,727 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:20:52,947 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:20:52,947 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:20:53,080 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:20:53,080 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:20:53,181 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:20:53,430 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:20:53,450 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:20:53,714 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:20:54,036 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:20:54,045 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:20:54,682 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:20:55,018 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:20:55,019 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:20:55,197 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:20:55,763 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:20:55,991 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:20:59,062 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:20:59,062 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:20:59,493 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:20:59,701 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:20:59,701 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:20:59,833 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:20:59,939 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:20:59,939 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:20:59,939 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:21:00,014 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:21:00,014 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:21:00,175 | INFO | orangehrm.test_pim_search_and_create_user | Searching for user
+2026-10-13 10:21:00,176 | INFO | orangehrm.pages.pim_page | Searching for user
+2026-10-13 10:21:00,287 | INFO | orangehrm.test_pim_search_and_create_user | Creating a new user
+2026-10-13 10:21:00,288 | INFO | orangehrm.pages.pim_page | Creating a new user
+2026-10-13 10:21:00,843 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:21:00,844 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_login[1-2] passed
+2026-10-13 10:21:00,884 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:21:00,997 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:21:02,193 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:21:02,194 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_login1[1-2] passed
+2026-10-13 10:21:02,437 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:21:07,467 | INFO | orangehrm.pages.pim_page | User search completed
+2026-10-13 10:21:07,653 | INFO | orangehrm.test_pim_search_and_create_user | Successfully searched for user and captured screenshot of search result
+2026-10-13 10:21:07,654 | INFO | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_search_user[1-2] passed
+2026-10-13 10:21:07,664 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:21:07,983 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:21:08,013 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:21:09,956 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:21:09,963 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:21:09,966 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:21:10,324 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:21:10,351 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:21:12,303 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:21:12,803 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:21:12,831 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:21:12,840 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:21:12,886 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:21:16,532 | INFO | orangehrm.pages.pim_page | New user created successfully
+2026-10-13 10:21:19,431 | INFO | orangehrm.test_pim_search_and_create_user | Successfully created a new user and captured screenshot of the process
+2026-10-13 10:21:19,484 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:21:19,487 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+user.py::test_create_user[1-2] passed
+2026-10-13 10:21:21,706 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:21:22,279 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:21:22,280 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:21:22,414 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:21:22,415 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:21:24,431 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:21:30,064 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:21:30,116 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:21:30,117 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:21:30,178 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:21:30,259 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:21:31,544 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:21:32,834 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:21:34,952 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:21:36,919 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:21:36,920 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:21:39,531 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:21:39,532 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:21:40,374 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:21:40,659 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:21:42,424 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:21:42,436 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:21:43,649 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:21:44,867 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:21:44,876 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:21:44,896 | INFO | orangehrm.test_pim_search_and_create_user | Searching for user
+2026-10-13 10:21:44,897 | INFO | orangehrm.pages.pim_page | Searching for user
+2026-10-13 10:21:47,204 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:21:47,205 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:21:47,354 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:21:47,401 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:21:47,471 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:21:47,948 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:21:49,009 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:21:50,640 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:21:50,825 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:21:50,876 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_login1[2-2] passed
+2026-10-13 10:21:51,081 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:21:52,084 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:21:52,100 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_login[2-2] passed
+2026-10-13 10:21:52,332 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:22:05,616 | INFO | orangehrm.pages.pim_page | User search completed
+2026-10-13 10:22:06,519 | INFO | orangehrm.test_pim_search_and_create_user | Successfully searched for user and captured screenshot of search result
+2026-10-13 10:22:06,550 | INFO | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_search_user[2-2] passed
+2026-10-13 10:22:06,579 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:22:23,315 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:22:23,349 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:22:23,565 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:22:23,599 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:22:24,597 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:22:24,692 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:22:25,351 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:22:25,390 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:22:29,500 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:22:29,559 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:22:29,638 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:22:35,992 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:22:35,994 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:22:37,930 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:22:37,931 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:22:38,409 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:22:39,485 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:22:40,398 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:22:42,303 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:22:42,304 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:22:42,316 | INFO | orangehrm.test_pim_search_and_create_user | Creating a new user
+2026-10-13 10:22:42,320 | INFO | orangehrm.pages.pim_page | Creating a new user
+2026-10-13 10:22:50,512 | INFO | orangehrm.pages.pim_page | New user created successfully
+2026-10-13 10:22:50,784 | INFO | orangehrm.test_pim_search_and_create_user | Successfully created a new user and captured screenshot of the process
+2026-10-13 10:22:50,785 | INFO | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_create_user[2-2] passed
+2026-10-13 10:22:50,807 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:22:54,839 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:22:54,864 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:22:55,823 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:27:29,495 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:27:31,229 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:27:31,480 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:27:31,778 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:27:32,018 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:27:32,180 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:27:32,180 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:27:32,180 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:27:32,180 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:27:40,369 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:27:40,389 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:27:40,504 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:27:41,452 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:27:41,464 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:27:41,494 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:27:41,608 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:27:41,623 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:27:41,707 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:27:42,364 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:27:42,369 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:27:42,371 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:27:50,151 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:27:50,151 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:27:50,275 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:27:50,276 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:27:50,370 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:27:50,372 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:27:51,444 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:27:51,444 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:27:51,971 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:27:51,971 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:27:51,983 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:27:51,983 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:27:52,156 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:27:52,168 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:27:52,170 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:27:52,620 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:27:52,621 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:27:53,074 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:27:53,923 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:27:54,044 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:27:54,053 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:27:54,053 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:27:54,286 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:27:54,581 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:27:54,606 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:27:54,616 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:27:56,194 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:27:56,194 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:27:56,210 | INFO | orangehrm.test_pim_search_and_create_user | Creating a new user
+2026-10-13 10:27:56,210 | INFO | orangehrm.pages.pim_page | Creating a new user
+2026-10-13 10:27:57,247 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:27:57,248 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:27:57,255 | INFO | orangehrm.test_pim_search_and_create_user | Searching for user
+2026-10-13 10:27:57,256 | INFO | orangehrm.pages.pim_page | Searching for user
+2026-10-13 10:27:57,260 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:27:57,261 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:27:57,309 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:27:57,656 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:27:57,657 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:27:57,685 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:27:57,807 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:27:58,844 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:27:59,787 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:27:59,789 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_login passed
+2026-10-13 10:27:59,836 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:27:59,987 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:27:59,989 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_login1 passed
+2026-10-13 10:28:00,022 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:28:02,980 | INFO | orangehrm.pages.pim_page | User search completed
+2026-10-13 10:28:03,315 | INFO | orangehrm.test_pim_search_and_create_user | Successfully searched for user and captured screenshot of search result
+2026-10-13 10:28:03,316 | INFO | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_search_user passed
+2026-10-13 10:28:03,332 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:28:04,120 | INFO | orangehrm.pages.pim_page | New user created successfully
+2026-10-13 10:28:04,403 | INFO | orangehrm.test_pim_search_and_create_user | Successfully created a new user and captured screenshot of the process
+2026-10-13 10:28:04,405 | INFO | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_create_user passed
+2026-10-13 10:28:04,435 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:28:06,442 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:28:06,464 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:28:07,970 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:28:07,993 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:28:10,474 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:28:10,483 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:28:10,709 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:28:10,719 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:28:11,015 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:33:21,833 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:33:22,011 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:44:47,453 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:44:47,484 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:45:32,591 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:45:32,613 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:45:39,590 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:45:39,610 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:45:39,611 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:45:45,766 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:45:45,767 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:45:46,396 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:45:46,476 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:45:46,551 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:45:46,639 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:45:48,112 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:45:48,218 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:45:48,219 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[admin] passed
+2026-10-13 10:45:48,229 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:45:50,610 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:45:50,620 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:45:52,195 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:45:52,198 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:45:52,198 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:45:59,368 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:45:59,368 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:45:59,467 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:46:00,189 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:46:00,267 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:46:00,331 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:46:00,335 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:46:01,800 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:46:01,801 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[user1] passed
+2026-10-13 10:46:01,808 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:46:04,077 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:46:04,085 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:46:05,583 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:46:05,589 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:46:05,590 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:46:11,581 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:46:11,581 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:46:11,665 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:46:12,096 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:46:12,155 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:46:12,229 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:46:15,543 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:46:15,654 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:46:15,655 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[user2] passed
+2026-10-13 10:46:15,660 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:46:17,976 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:46:17,987 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:47:02,874 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:47:03,059 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:47:05,254 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:47:05,264 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:47:05,268 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:47:11,751 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:47:11,752 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:47:12,406 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:47:12,406 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:47:12,515 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:47:12,996 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:47:13,051 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:47:13,098 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:47:13,099 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:47:13,101 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:47:13,106 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:47:14,132 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:47:14,132 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_login passed
+2026-10-13 10:47:14,139 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:47:16,415 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:47:16,426 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:47:18,108 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:47:18,123 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:47:18,123 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:47:21,873 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:47:21,873 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:47:21,980 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:47:22,401 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:47:22,463 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:47:22,571 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:47:24,149 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:47:24,278 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:47:24,280 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[admin] passed
+2026-10-13 10:47:24,285 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:47:26,530 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:47:26,541 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:47:28,190 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:47:28,193 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:47:28,197 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:47:35,779 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:47:35,779 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:47:35,897 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:47:36,321 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:47:36,400 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:47:36,487 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:47:36,501 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:47:38,468 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:47:38,469 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[user1] passed
+2026-10-13 10:47:38,472 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:47:40,701 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:47:40,710 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:47:42,408 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:47:42,411 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:47:42,412 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:47:46,670 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:47:46,670 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:47:46,776 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:47:47,826 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:47:47,887 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:47:47,942 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:47:51,375 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:47:51,498 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:47:51,499 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[user2] passed
+2026-10-13 10:47:51,506 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:47:53,784 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:47:53,794 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:47:55,276 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:47:55,278 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:47:55,287 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:48:08,114 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:48:08,114 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:48:09,192 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:48:09,193 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:48:09,313 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:48:09,627 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:48:09,681 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:48:09,730 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:48:09,731 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:48:09,733 | INFO | orangehrm.test_pim_search_and_create_user | Searching for user
+2026-10-13 10:48:09,733 | INFO | orangehrm.pages.pim_page | Searching for user
+2026-10-13 10:48:14,506 | INFO | orangehrm.pages.pim_page | User search completed
+2026-10-13 10:48:14,615 | INFO | orangehrm.test_pim_search_and_create_user | Successfully searched for user and captured screenshot of search result
+2026-10-13 10:48:14,615 | INFO | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_search_user passed
+2026-10-13 10:48:14,620 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:48:16,897 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:48:16,913 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:48:18,731 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:48:18,733 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:48:18,737 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:48:25,204 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:48:25,205 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:48:26,520 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:48:26,521 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:48:26,651 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:48:27,861 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:48:27,925 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:48:27,997 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:48:27,997 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:48:27,998 | INFO | orangehrm.test_pim_search_and_create_user | Creating a new user
+2026-10-13 10:48:27,998 | INFO | orangehrm.pages.pim_page | Creating a new user
+2026-10-13 10:48:44,056 | ERROR | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_create_user failed during call: orange_hrm_login = <selenium.webdriver.chrome.webdriver.WebDriver (session="9f53cdbd28fdb5f76b2e6cdce88b3997")>
+
+    @pytest.mark.regression
+    def test_create_user(orange_hrm_login):
+        logger.info("Creating a new user")
+>       HRM_PIMPage(orange_hrm_login).create_user()
+
+tests\test_pim_search_and_create_user.py:20: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+pages\pim_page.py:58: in create_user
+    self.driver.find_element(By.XPATH, self.homepage_locators.search_btn["xpath"]).click()
+.venv\Lib\site-packages\selenium\webdriver\remote\webelement.py:112: in click
+    self._execute(Command.CLICK_ELEMENT)
+.venv\Lib\site-packages\selenium\webdriver\remote\webelement.py:504: in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py:506: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000002BF2F695EB0>
+response = {'status': 400, 'value': '{"value":{"error":"element click intercepted","message":"element click intercepted: Element ...0a2e4c]\\n\\tKERNEL32!BaseThreadInitThunk [0x7ffd661bcd87+17]\\n\\tntdll!RtlUserThreadStart [0x7ffd6674caec+2c]\\n"}}'}
+
+    def check_response(self, response: dict[str, Any]) -> None:
+        """Check that a JSON response from the WebDriver does not have an error.
+    
+        Args:
+            response: The JSON response from the WebDriver server as a dictionary
+                object.
+    
+        Raises:
+            WebDriverException: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                try:
+                    value = json.loads(value_json)
+                    if isinstance(value, dict):
+                        if len(value) == 1:
+                            value = value["value"]
+                        status = value.get("error", None)
+                        if not status:
+                            status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                            message = value.get("value") or value.get("message")
+                            if not isinstance(message, str):
+                                value = message
+                                message = message.get("message") if isinstance(message, dict) else None
+                        else:
+                            message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: type[WebDriverException]
+        e = ErrorCode()
+        error_codes = [item for item in dir(e) if not item.startswith("__")]
+        for error_code in error_codes:
+            error_info = getattr(ErrorCode, error_code)
+            if isinstance(error_info, list) and status in error_info:
+                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
+                break
+        else:
+            exception_class = WebDriverException
+    
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and "message" in value:
+            message = value["message"]
+    
+        screen = None  # type: ignore[assignment]
+        if "screen" in value:
+            screen = value["screen"]
+    
+        stacktrace = None
+        st_value = value.get("stackTrace") or value.get("stacktrace")
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split("\n")
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = frame.get("lineNumber", "")
+                        file = frame.get("fileName", "<anonymous>")
+                        if line:
+                            file = f"{file}:{line}"
+                        meth = frame.get("methodName", "<anonymous>")
+                        if "className" in frame:
+                            meth = f"{frame['className']}.{meth}"
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if "data" in value:
+                alert_text = value["data"].get("text")
+            elif "alert" in value:
+                alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)
+>       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button data-v-10d463b7="" data-v-304890b0="" type="submit" class="oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space">...</button> is not clickable at point (1793, 493). Other element would receive the click: <div data-v-d5bfe35b="" class="oxd-form-loader">...</div>
+E         (Session info: chrome=154.0.8037.98); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+E       Stacktrace:
+E       	chromedriver!GetHandleVerifier [0x7ff60f189d55+5a55]
+E       	chromedriver!(No symbol) [0x7ff60f0af540]
+E       	chromedriver!(No symbol) [0x7ff60eed45fd]
+E       	chromedriver!(No symbol) [0x7ff60ef37a73]
+E       	chromedriver!(No symbol) [0x7ff60ef3567a]
+E       	chromedriver!(No symbol) [0x7ff60ef329b7]
+E       	chromedriver!(No symbol) [0x7ff60ef31880]
+E       	chromedriver!(No symbol) [0x7ff60ef23828]
+E       	chromedriver!(No symbol) [0x7ff60ef590ea]
+E       	chromedriver!(No symbol) [0x7ff60ef230a6]
+E       	chromedriver!(No symbol) [0x7ff60ef7fcd9]
+E       	chromedriver!(No symbol) [0x7ff60ef21a12]
+E       	chromedriver!(No symbol) [0x7ff60ef22823]
+E       	chromedriver!GetHandleVerifier [0x7ff60f5a04b1+41c1b1]
+E       	chromedriver!GetHandleVerifier [0x7ff60f5ce26b+449f6b]
+E       	chromedriver!GetHandleVerifier [0x7ff60f5c274e+43e44e]
+E       	chromedriver!GetHandleVerifier [0x7ff60f2832fe+feffe]
+E       	chromedriver!(No symbol) [0x7ff60f0bcb55]
+E       	chromedriver!(No symbol) [0x7ff60f0b7f64]
+E       	chromedriver!(No symbol) [0x7ff60f0b80f4]
+E       	chromedriver!(No symbol) [0x7ff60f0a2e4c]
+E       	KERNEL32!BaseThreadInitThunk [0x7ffd661bcd87+17]
+E       	ntdll!RtlUserThreadStart [0x7ffd6674caec+2c]
+
+.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:232: ElementClickInterceptedException
+2026-10-13 10:48:44,063 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:48:46,398 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:48:46,415 | INFO | orangehrm.conftest | Pytest session finished with exit status 1
+2026-10-13 10:49:29,514 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:49:29,540 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:49:31,342 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:49:31,346 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:49:31,350 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:49:39,528 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:49:39,528 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:49:42,332 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:49:42,332 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:49:42,466 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:49:43,723 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:49:43,788 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:49:43,847 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:49:43,847 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:49:43,850 | INFO | orangehrm.test_pim_search_and_create_user | Creating a new user
+2026-10-13 10:49:43,850 | INFO | orangehrm.pages.pim_page | Creating a new user
+2026-10-13 10:49:55,724 | INFO | orangehrm.pages.pim_page | New user created successfully
+2026-10-13 10:49:55,912 | INFO | orangehrm.test_pim_search_and_create_user | Successfully created a new user and captured screenshot of the process
+2026-10-13 10:49:55,913 | INFO | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_create_user passed
+2026-10-13 10:49:55,916 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:49:58,234 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:49:58,246 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:50:12,432 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:50:12,526 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:50:13,784 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:50:13,787 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:50:13,789 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:50:19,585 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:50:19,587 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:50:21,818 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:50:21,821 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:50:22,608 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:50:23,913 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:50:24,301 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:50:24,788 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:50:24,789 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:50:24,802 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:50:26,380 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:50:26,478 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:50:26,479 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_login passed
+2026-10-13 10:50:26,487 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:50:28,968 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:50:28,987 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:50:32,402 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:50:32,435 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:50:32,436 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:50:41,982 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:50:41,982 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:50:42,059 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:50:42,472 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:50:42,560 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:50:42,638 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:50:43,689 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:50:43,794 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:50:43,795 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[admin] passed
+2026-10-13 10:50:43,799 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:50:46,158 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:50:46,175 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:50:49,489 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:50:49,583 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:50:49,585 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:50:55,497 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:50:55,498 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:50:55,617 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:50:56,140 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:50:56,318 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:50:56,524 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:50:58,095 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:50:58,232 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:50:58,233 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[user1] passed
+2026-10-13 10:50:58,242 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:51:00,796 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:51:00,816 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:51:04,146 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:51:04,205 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:51:04,207 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:51:12,084 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:51:12,085 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:51:12,164 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:51:13,497 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:51:13,574 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:51:13,728 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:51:14,782 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:51:14,910 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:51:14,910 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[user2] passed
+2026-10-13 10:51:14,918 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:51:17,630 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:51:17,648 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:51:20,318 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:51:20,333 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:51:20,361 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:51:27,888 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:51:27,890 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:51:29,171 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:51:29,172 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:51:29,399 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:51:30,983 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:51:31,082 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:51:31,205 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:51:31,205 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:51:31,207 | INFO | orangehrm.test_pim_search_and_create_user | Searching for user
+2026-10-13 10:51:31,208 | INFO | orangehrm.pages.pim_page | Searching for user
+2026-10-13 10:51:38,727 | INFO | orangehrm.pages.pim_page | User search completed
+2026-10-13 10:51:38,861 | INFO | orangehrm.test_pim_search_and_create_user | Successfully searched for user and captured screenshot of search result
+2026-10-13 10:51:38,862 | INFO | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_search_user passed
+2026-10-13 10:51:38,868 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:51:41,382 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:51:41,397 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:51:44,407 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:51:44,417 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:51:44,425 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:51:52,308 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:51:52,309 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:51:53,014 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:51:53,014 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:51:53,190 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:51:53,462 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:51:53,603 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:51:53,734 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:51:53,734 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:51:53,739 | INFO | orangehrm.test_pim_search_and_create_user | Creating a new user
+2026-10-13 10:51:53,740 | INFO | orangehrm.pages.pim_page | Creating a new user
+2026-10-13 10:52:01,205 | INFO | orangehrm.pages.pim_page | New user created successfully
+2026-10-13 10:52:01,463 | INFO | orangehrm.test_pim_search_and_create_user | Successfully created a new user and captured screenshot of the process
+2026-10-13 10:52:01,464 | INFO | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_create_user passed
+2026-10-13 10:52:01,475 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:52:05,585 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:52:05,596 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:54:01,229 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:54:03,238 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:54:03,447 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:54:03,634 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:54:03,844 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:54:03,994 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:54:04,152 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:54:04,255 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:54:04,255 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:54:04,255 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:54:04,255 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:54:04,255 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:54:04,255 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:54:05,862 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:54:05,868 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:54:05,870 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:54:19,325 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:54:19,325 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:54:20,251 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:54:20,251 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:54:20,373 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:54:20,840 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:54:20,900 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:54:20,972 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:54:20,972 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:54:20,975 | INFO | orangehrm.test_pim_search_and_create_user | Creating a new user
+2026-10-13 10:54:20,975 | INFO | orangehrm.pages.pim_page | Creating a new user
+2026-10-13 10:54:22,863 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:54:22,869 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:54:22,871 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:54:24,266 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:54:24,280 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:54:24,280 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:54:29,376 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:54:29,385 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:54:29,386 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:54:29,390 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:54:29,390 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:54:30,483 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:54:30,488 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:54:30,488 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:54:30,651 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:54:30,652 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:54:32,688 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:54:32,835 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:54:32,836 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:54:33,946 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:54:34,224 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:54:34,237 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 10:54:34,277 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 10:54:34,895 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:54:34,971 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:54:35,355 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:54:35,502 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:54:38,570 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:54:38,571 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:54:38,638 | INFO | orangehrm.test_pim_search_and_create_user | Searching for user
+2026-10-13 10:54:38,638 | INFO | orangehrm.pages.pim_page | Searching for user
+2026-10-13 10:54:38,668 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:54:38,903 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:54:38,904 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:54:40,135 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:54:40,820 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:54:41,298 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:54:41,299 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[user1] passed
+2026-10-13 10:54:41,495 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:54:41,920 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:54:41,921 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:54:42,194 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:54:42,253 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:54:43,649 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:54:44,293 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:54:45,068 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 10:54:45,070 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:54:45,802 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:54:46,557 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:54:46,557 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:54:46,911 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:54:47,281 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:54:47,421 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:54:47,537 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:54:47,548 | INFO | orangehrm.pages.pim_page | User search completed
+2026-10-13 10:54:47,817 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:54:47,859 | INFO | orangehrm.test_pim_search_and_create_user | Successfully searched for user and captured screenshot of search result
+2026-10-13 10:54:47,861 | INFO | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_search_user passed
+2026-10-13 10:54:47,914 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:54:48,256 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:54:48,256 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 10:54:48,288 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:54:48,290 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[admin] passed
+2026-10-13 10:54:48,298 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:54:48,302 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:54:48,833 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:54:48,873 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:54:49,050 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:54:49,051 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[user2] passed
+2026-10-13 10:54:49,133 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:54:49,245 | INFO | orangehrm.pages.pim_page | New user created successfully
+2026-10-13 10:54:49,623 | INFO | orangehrm.test_pim_search_and_create_user | Successfully created a new user and captured screenshot of the process
+2026-10-13 10:54:49,682 | INFO | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_create_user passed
+2026-10-13 10:54:49,979 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:54:51,163 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:54:51,219 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:54:51,426 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:54:52,489 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 10:54:52,520 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_login passed
+2026-10-13 10:54:52,778 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:54:54,451 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:54:54,527 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:54:54,969 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:54:55,237 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:54:56,383 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:54:56,488 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:55:13,640 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:55:13,672 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:55:13,858 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:55:13,881 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:55:14,590 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 10:58:38,466 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:58:38,495 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:58:40,628 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:58:40,638 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:58:40,638 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:58:46,604 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:58:46,604 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:58:46,746 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:58:49,279 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:58:49,369 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:58:49,467 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:58:52,920 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:58:53,182 | ERROR | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[admin] failed during call: driver = <selenium.webdriver.chrome.webdriver.WebDriver (session="54b13c39849e13fddd75b728f81df2b2")>
+user = {'username': 'Admin', 'password': 'admin123'}
+
+    @pytest.mark.regression
+    @pytest.mark.parametrize(
+        "user",
+        LOGIN_USERS.values(),
+        ids=LOGIN_USERS.keys(),
+    )
+    def test_hrm_multi_login(driver, user):
+        logger.info("Waiting for the HRM home page")
+        HRM_LoginPage(driver).hrm_login_page(
+            driver,
+            user["username"],
+            user["password"],
+        )
+        assert driver.title == "OrangeHRM", (
+            f"Expected title 'OrangeHRM' but got '{driver.title}' "
+            f"for user '{user['username']}'"
+        )
+        logger.info("Capturing HRM home page screenshot")
+>       Screenshot.capture(driver, "HRM_Home_Page", f"user_{user['username']}")
+E       TypeError: Screenshot.capture() takes 2 positional arguments but 3 were given
+
+tests\test_login.py:39: TypeError
+2026-10-13 10:58:53,190 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:58:55,601 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 10:58:55,631 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:58:57,738 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:58:57,749 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:58:57,750 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 10:59:04,601 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 10:59:04,601 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 10:59:04,758 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 10:59:06,083 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 10:59:06,192 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 10:59:06,301 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 10:59:11,305 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 10:59:11,307 | ERROR | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[user1] failed during call: driver = <selenium.webdriver.chrome.webdriver.WebDriver (session="b390582aa4e1b882aa3cdcf4c8e8d688")>
+user = {'username': 'Admin', 'password': 'admin123'}
+
+    @pytest.mark.regression
+    @pytest.mark.parametrize(
+        "user",
+        LOGIN_USERS.values(),
+        ids=LOGIN_USERS.keys(),
+    )
+    def test_hrm_multi_login(driver, user):
+        logger.info("Waiting for the HRM home page")
+        HRM_LoginPage(driver).hrm_login_page(
+            driver,
+            user["username"],
+            user["password"],
+        )
+        assert driver.title == "OrangeHRM", (
+            f"Expected title 'OrangeHRM' but got '{driver.title}' "
+            f"for user '{user['username']}'"
+        )
+        logger.info("Capturing HRM home page screenshot")
+>       Screenshot.capture(driver, "HRM_Home_Page", f"user_{user['username']}")
+E       TypeError: Screenshot.capture() takes 2 positional arguments but 3 were given
+
+tests\test_login.py:39: TypeError
+2026-10-13 10:59:11,313 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 10:59:49,901 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 10:59:49,928 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 10:59:52,325 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 10:59:52,357 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 10:59:52,359 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:00:02,168 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:00:02,178 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:00:02,505 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:00:04,089 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:00:04,729 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:00:05,137 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:00:09,319 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 11:00:09,496 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 11:00:09,499 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[admin] passed
+2026-10-13 11:00:09,522 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:00:15,893 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:00:15,916 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 11:00:20,064 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:00:20,077 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 11:00:20,077 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:00:26,458 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:00:26,459 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:00:26,690 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:00:28,029 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:00:28,507 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:00:28,756 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:00:29,961 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 11:00:30,104 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 11:00:30,106 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[user1] passed
+2026-10-13 11:00:30,118 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:00:32,957 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:00:32,982 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 11:00:36,123 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:00:36,139 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 11:00:36,141 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:00:41,436 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:00:41,437 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:00:41,539 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:00:41,967 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:00:42,070 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:00:42,179 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:00:43,601 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 11:00:43,722 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 11:00:43,723 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[user2] passed
+2026-10-13 11:00:43,730 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:00:46,276 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:00:46,323 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 11:03:00,481 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 11:03:00,507 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 11:03:01,994 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:03:02,000 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 11:03:02,001 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:03:07,062 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:03:07,062 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:03:07,191 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:03:09,635 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:03:09,730 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:03:09,797 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:03:09,801 | INFO | orangehrm.test_login | Capturing HRM home page screenshot for user 'Admin'
+2026-10-13 11:03:11,899 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 11:03:11,901 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[admin] passed
+2026-10-13 11:03:11,907 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:03:14,242 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:03:14,253 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 11:03:15,746 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:03:15,749 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 11:03:15,749 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:03:21,851 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:03:21,851 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:03:21,950 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:03:23,098 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:03:23,164 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:03:23,220 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:03:27,782 | INFO | orangehrm.test_login | Capturing HRM home page screenshot for user 'Admin'
+2026-10-13 11:03:27,885 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 11:03:27,887 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[user1] passed
+2026-10-13 11:03:27,894 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:03:30,171 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:03:30,178 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 11:03:31,836 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:03:31,839 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 11:03:31,839 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:03:37,496 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:03:37,496 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:03:37,582 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:03:39,408 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:03:39,492 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:03:39,553 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:03:43,183 | INFO | orangehrm.test_login | Capturing HRM home page screenshot for user 'Admin'
+2026-10-13 11:03:43,292 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 11:03:43,292 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[user2] passed
+2026-10-13 11:03:43,298 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:03:45,620 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:03:45,631 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 11:05:17,090 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 11:05:18,837 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 11:05:19,018 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 11:05:19,184 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 11:05:19,408 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 11:05:19,575 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 11:05:19,691 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 11:05:19,818 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 11:05:19,818 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 11:05:19,818 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 11:05:19,818 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 11:05:29,471 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:05:29,511 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:05:31,001 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:05:31,072 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 11:05:31,087 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:05:31,240 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 11:05:31,241 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:05:31,262 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 11:05:31,366 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 11:05:31,485 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 11:05:31,492 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:05:31,603 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 11:05:31,603 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:05:32,522 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:05:32,728 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 11:05:33,471 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 11:05:34,325 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 11:05:34,326 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:05:41,926 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:05:41,927 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:05:41,965 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 11:05:41,966 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:05:42,581 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:05:44,992 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:05:44,993 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:05:45,748 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:05:45,988 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:05:45,988 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:05:46,317 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:05:46,317 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:05:47,256 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:05:47,729 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 11:05:47,730 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:05:48,304 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:05:48,353 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:05:48,449 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 11:05:48,450 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:05:48,619 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:05:48,722 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:05:48,868 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:05:48,919 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:05:49,056 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:05:49,193 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:05:49,604 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:05:49,622 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:05:49,622 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:05:50,060 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:05:50,137 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:05:51,292 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:05:51,293 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:05:52,087 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:05:52,088 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 11:05:52,214 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:05:52,487 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 11:05:54,621 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 11:05:57,416 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:05:57,814 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:05:59,259 | INFO | orangehrm.test_login | Capturing HRM home page screenshot for user 'Admin'
+2026-10-13 11:06:00,772 | INFO | orangehrm.test_login | Capturing HRM home page screenshot for user 'Admin'
+2026-10-13 11:06:01,586 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 11:06:01,670 | INFO | orangehrm.test_login | Capturing HRM home page screenshot for user 'Admin'
+2026-10-13 11:06:01,717 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_login passed
+2026-10-13 11:06:02,203 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:06:02,633 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:06:03,673 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 11:06:03,681 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[user2] passed
+2026-10-13 11:06:04,137 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 11:06:04,267 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[admin] passed
+2026-10-13 11:06:04,373 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 11:06:04,381 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[user1] passed
+2026-10-13 11:06:04,419 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:06:04,488 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:06:04,663 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:06:04,703 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:06:06,218 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:06:06,805 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:06:08,425 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:06:08,426 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 11:06:09,414 | INFO | orangehrm.test_pim_search_and_create_user | Searching for user
+2026-10-13 11:06:09,443 | INFO | orangehrm.pages.pim_page | Searching for user
+2026-10-13 11:06:10,320 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:06:10,321 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 11:06:10,727 | INFO | orangehrm.test_pim_search_and_create_user | Creating a new user
+2026-10-13 11:06:10,731 | INFO | orangehrm.pages.pim_page | Creating a new user
+2026-10-13 11:06:43,239 | INFO | orangehrm.pages.pim_page | User search completed
+2026-10-13 11:06:44,715 | INFO | orangehrm.test_pim_search_and_create_user | Successfully searched for user and captured screenshot of search result
+2026-10-13 11:06:44,743 | INFO | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_search_user passed
+2026-10-13 11:06:45,180 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:06:47,890 | INFO | orangehrm.pages.pim_page | New user created successfully
+2026-10-13 11:06:48,635 | INFO | orangehrm.test_pim_search_and_create_user | Successfully created a new user and captured screenshot of the process
+2026-10-13 11:06:48,661 | INFO | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_create_user passed
+2026-10-13 11:06:49,379 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:07:10,757 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:07:10,816 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 11:07:11,442 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:07:11,504 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 11:07:11,755 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:07:11,820 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 11:07:11,834 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:07:11,899 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 11:07:13,749 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:07:13,791 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 11:07:14,525 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:07:14,584 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 11:07:15,724 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 11:08:07,548 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 11:08:07,725 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 11:08:14,220 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:08:14,226 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 11:08:14,252 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 11:08:19,238 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 11:08:19,238 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:08:21,463 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:08:21,463 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:08:21,620 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:08:21,991 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:08:22,134 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:08:22,273 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:08:22,274 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 11:08:22,277 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 11:08:23,665 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 11:08:24,181 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 11:08:24,182 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_login passed
+2026-10-13 11:08:24,189 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:08:26,710 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:08:26,722 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 11:08:28,615 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:08:28,686 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 11:08:28,686 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:08:36,530 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:08:36,530 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:08:36,611 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:08:37,022 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:08:37,078 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:08:37,132 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:08:37,140 | INFO | orangehrm.test_login | Capturing HRM home page screenshot for user 'Admin'
+2026-10-13 11:08:39,139 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 11:08:39,139 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[admin] passed
+2026-10-13 11:08:39,143 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:08:41,462 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:08:41,470 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 11:08:43,190 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:08:43,200 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 11:08:43,202 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:08:49,759 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:08:49,759 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:08:49,854 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:08:50,819 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:08:50,888 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:08:50,950 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:08:50,961 | INFO | orangehrm.test_login | Capturing HRM home page screenshot for user 'Admin'
+2026-10-13 11:08:54,723 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 11:08:54,724 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[user1] passed
+2026-10-13 11:08:54,727 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:08:56,995 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:08:57,005 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 11:08:58,895 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:08:58,899 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 11:08:58,899 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:09:03,596 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:09:03,597 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:09:03,714 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:09:04,968 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:09:05,059 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:09:05,156 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:09:08,542 | INFO | orangehrm.test_login | Capturing HRM home page screenshot for user 'Admin'
+2026-10-13 11:09:08,648 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 11:09:08,648 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[user2] passed
+2026-10-13 11:09:08,654 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:09:10,967 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:09:10,975 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 11:09:12,827 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:09:12,847 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 11:09:12,856 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 11:09:18,463 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 11:09:18,463 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:09:20,141 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:09:20,141 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:09:20,252 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:09:21,266 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:09:21,328 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:09:21,397 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:09:21,398 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 11:09:21,398 | INFO | orangehrm.test_pim_search_and_create_user | Searching for user
+2026-10-13 11:09:21,398 | INFO | orangehrm.pages.pim_page | Searching for user
+2026-10-13 11:09:39,087 | INFO | orangehrm.pages.pim_page | User search completed
+2026-10-13 11:09:39,196 | INFO | orangehrm.test_pim_search_and_create_user | Successfully searched for user and captured screenshot of search result
+2026-10-13 11:09:39,197 | INFO | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_search_user passed
+2026-10-13 11:09:39,201 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:09:41,541 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:09:41,549 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 11:09:44,641 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:09:44,667 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 11:09:44,670 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 11:09:51,154 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 11:09:51,155 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:09:52,923 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:09:52,923 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:09:53,047 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:09:55,252 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:09:55,374 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:09:55,526 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:09:55,527 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 11:09:55,530 | INFO | orangehrm.test_pim_search_and_create_user | Creating a new user
+2026-10-13 11:09:55,531 | INFO | orangehrm.pages.pim_page | Creating a new user
+2026-10-13 11:10:15,485 | INFO | orangehrm.pages.pim_page | New user created successfully
+2026-10-13 11:10:15,638 | INFO | orangehrm.test_pim_search_and_create_user | Successfully created a new user and captured screenshot of the process
+2026-10-13 11:10:15,638 | INFO | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_create_user passed
+2026-10-13 11:10:15,643 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:10:18,124 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:10:18,140 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 11:10:47,133 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 11:10:49,025 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 11:10:49,276 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 11:10:49,658 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 11:10:49,949 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 11:10:50,284 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 11:10:50,469 | INFO | orangehrm.conftest | Pytest session started
+2026-10-13 11:10:50,667 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 11:10:50,667 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 11:10:50,667 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 11:10:50,667 | INFO | orangehrm.conftest | Starting Chrome WebDriver
+2026-10-13 11:10:53,899 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:10:53,910 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 11:10:53,916 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 11:10:54,292 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:10:54,303 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 11:10:54,305 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 11:11:07,490 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:11:07,505 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 11:11:07,505 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:11:08,506 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 11:11:08,507 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:11:12,124 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:11:12,124 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:11:12,863 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:11:12,975 | INFO | orangehrm.conftest | Loading configuration for environment 'qa'
+2026-10-13 11:11:12,976 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:11:13,002 | INFO | orangehrm.conftest | Opening application URL: https://opensource-demo.orangehrmlive.com/
+2026-10-13 11:11:13,484 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:11:13,520 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 11:11:13,521 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:11:13,766 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:11:14,056 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:11:14,056 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 11:11:14,072 | INFO | orangehrm.test_pim_search_and_create_user | Searching for user
+2026-10-13 11:11:14,073 | INFO | orangehrm.pages.pim_page | Searching for user
+2026-10-13 11:11:15,292 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:11:15,292 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:11:15,679 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:11:16,710 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:11:17,023 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:11:17,271 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:11:17,271 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 11:11:17,274 | INFO | orangehrm.test_pim_search_and_create_user | Creating a new user
+2026-10-13 11:11:17,274 | INFO | orangehrm.pages.pim_page | Creating a new user
+2026-10-13 11:11:22,818 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:11:22,819 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:11:23,381 | INFO | orangehrm.conftest | Starting login flow
+2026-10-13 11:11:23,381 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:11:26,437 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:11:26,993 | INFO | orangehrm.conftest | Chrome WebDriver started and maximized
+2026-10-13 11:11:29,901 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:11:29,897 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:11:30,047 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:11:32,103 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 11:11:32,134 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:11:32,242 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:11:32,823 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 11:11:32,989 | INFO | orangehrm.pages.login_page | Opening OrangeHRM login page
+2026-10-13 11:11:41,059 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:11:41,060 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:11:43,486 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:11:43,669 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:11:43,995 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:11:47,459 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:11:52,873 | INFO | orangehrm.pages.login_page | Waiting for login page to load
+2026-10-13 11:11:52,874 | INFO | orangehrm.pages.login_page | Capturing login page screenshot
+2026-10-13 11:11:53,693 | INFO | orangehrm.pages.login_page | Entering username
+2026-10-13 11:11:54,038 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:11:54,231 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:11:55,334 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:12:00,323 | INFO | orangehrm.pages.login_page | Entering password
+2026-10-13 11:12:02,321 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:12:02,498 | INFO | orangehrm.test_login | Capturing HRM home page screenshot for user 'Admin'
+2026-10-13 11:12:04,327 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 11:12:04,487 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[user1] passed
+2026-10-13 11:12:05,112 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:12:06,732 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:12:07,588 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:12:07,589 | INFO | orangehrm.conftest | Login flow completed
+2026-10-13 11:12:07,924 | INFO | orangehrm.test_login | Waiting for the HRM home page
+2026-10-13 11:12:09,051 | INFO | orangehrm.test_login | Capturing HRM home page screenshot for user 'Admin'
+2026-10-13 11:12:09,808 | INFO | orangehrm.pages.login_page | Submitting login form
+2026-10-13 11:12:10,139 | INFO | orangehrm.test_login | Capturing HRM home page screenshot
+2026-10-13 11:12:12,977 | INFO | orangehrm.pages.pim_page | User search completed
+2026-10-13 11:12:13,155 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 11:12:13,170 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[user2] passed
+2026-10-13 11:12:13,296 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:12:13,516 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 11:12:13,538 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_login passed
+2026-10-13 11:12:13,856 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:12:13,926 | INFO | orangehrm.test_pim_search_and_create_user | Successfully searched for user and captured screenshot of search result
+2026-10-13 11:12:14,173 | INFO | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_search_user passed
+2026-10-13 11:12:14,754 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:12:17,234 | INFO | orangehrm.pages.login_page | Waiting for login to complete
+2026-10-13 11:12:17,345 | INFO | orangehrm.test_login | Capturing HRM home page screenshot for user 'Admin'
+2026-10-13 11:12:18,952 | INFO | orangehrm.test_login | Successfully navigated to HRM home page
+2026-10-13 11:12:19,826 | INFO | orangehrm.conftest | Test tests/test_login.py::test_hrm_multi_login[admin] passed
+2026-10-13 11:12:25,241 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:12:28,062 | INFO | orangehrm.pages.pim_page | New user created successfully
+2026-10-13 11:12:28,536 | INFO | orangehrm.test_pim_search_and_create_user | Successfully created a new user and captured screenshot of the process
+2026-10-13 11:12:28,539 | INFO | orangehrm.conftest | Test tests/test_pim_search_and_create_user.py::test_create_user passed
+2026-10-13 11:12:28,720 | INFO | orangehrm.conftest | Closing Chrome WebDriver
+2026-10-13 11:13:02,092 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:13:02,182 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 11:13:02,962 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:13:03,039 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 11:13:03,319 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:13:03,381 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:13:03,389 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 11:13:03,459 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 11:13:03,552 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:13:03,636 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 11:13:04,475 | INFO | orangehrm.conftest | Chrome WebDriver closed
+2026-10-13 11:13:04,539 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
+2026-10-13 11:13:05,411 | INFO | orangehrm.conftest | Pytest session finished with exit status 0
