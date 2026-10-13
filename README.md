@@ -133,9 +133,7 @@ These folders are created or updated when tests run. The HTML report is generate
 
 ## GitHub Actions
 
-The workflow in `.github/workflows/test_suite.yml` runs `pytest` on pushes and pull requests targeting `main`, and on its scheduled run. A run can be viewed under the repository's **Actions** tab. The workflow currently selects Python 3.9.20, which is below Selenium's stated minimum version; update the workflow to Python 3.10 or newer for dependency installation to be compatible.
-
-The workflow currently attempts to upload `report.html`, while pytest writes the report to `reports/report.html`. The test run may therefore succeed even if the HTML report artifact is not uploaded; use the local report path above when running the suite locally.
+The workflow in `.github/workflows/test_suite.yml` runs `pytest` on pushes and pull requests targeting `master`, and on its scheduled run. It uses Python 3.10 and uploads `reports/report.html` as the `pytest-report` artifact. A run and its uploaded artifact can be viewed under the repository's **Actions** tab.
 
 ## Troubleshooting
 

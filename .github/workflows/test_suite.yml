@@ -21,7 +21,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
-          python-version: '3.9.20'
+          python-version: '3.10'
 
       - name: Install dependencies
         run: |
@@ -34,10 +34,10 @@ jobs:
 
 
       - name: Upload report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with: 
           name: pytest-report
-          path: report.html
+          path: reports/report.html
 
         
     
