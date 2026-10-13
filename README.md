@@ -133,7 +133,7 @@ These folders are created or updated when tests run. The HTML report is generate
 
 ## GitHub Actions
 
-The workflow in `.github/workflows/test_suite.yml` runs `pytest` on pushes and pull requests targeting `master`, and on its scheduled run. It uses Python 3.10 and uploads `reports/report.html` as the `pytest-report` artifact. A run and its uploaded artifact can be viewed under the repository's **Actions** tab.
+The workflow in `.github/workflows/test_suite.yml` runs `pytest --headless` on pushes and pull requests targeting `master`, and on its scheduled run. Headless mode lets Chrome run on the GitHub runner without opening a visible browser window. The workflow uses Python 3.10 and uploads `reports/report.html` as the `pytest-report` artifact. A run and its uploaded artifact can be viewed under the repository's **Actions** tab.
 
 ## Troubleshooting
 
