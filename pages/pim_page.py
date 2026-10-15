@@ -38,7 +38,7 @@ class HRM_PIMPage:
         logger.info("Searching for user")
         pim_ele = self.wait.until(EC.element_to_be_clickable((By.XPATH, self.homepage_locators.pim["xpath"])))
         pim_ele.click()
-        self.driver.find_element(By.XPATH, self.homepage_locators.emp_id["xpath"]).send_keys("0304")
+        self.driver.find_element(By.XPATH, self.homepage_locators.emp_id["xpath"]).send_keys("0436")
         self.driver.find_element(By.XPATH, self.homepage_locators.search_btn["xpath"]).click()
         assert self.driver.find_element(By.XPATH, self.homepage_locators.search_result["xpath"]).is_displayed(), "Search result not found"
         logger.info("User search completed")

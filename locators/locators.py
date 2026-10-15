@@ -29,7 +29,7 @@ class HomePageLocators:
     search_result={
         "xpath":
             #"(//div[@role='rowgroup'])[2]//div[2]"
-            "//div[@role='table']//div[contains(text(),'0304')]//following::div[2][contains(text(),'Rahul')]"
+            "//div[@role='table']//div[contains(text(),'0436')]//following::div[2][contains(text(),'Selva Bon')]"
     }
     add_emp_btn={
         "xpath":"//a[normalize-space()='Add Employee']"
