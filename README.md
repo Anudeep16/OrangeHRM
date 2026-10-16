@@ -6,8 +6,7 @@ This project uses Python, Selenium, and pytest to open the OrangeHRM website in 
 
 - **Login check:** Logs in using the environment account and checks that the OrangeHRM home page opens.
 - **Multiple-user login check:** Runs the login check once for every entry in the `users` section of `config/config.json`.
-- **PIM employee search:** Opens the PIM (Personal Information Management) area and checks for the employee used by the test.
-- **PIM employee creation:** Enters generated employee details in the Add Employee form.
+- **PIM employee creation and search:** Creates an employee, returns its generated employee ID, then searches for that same ID to verify the record.
 
 The tests use the public OrangeHRM demo site, so an internet connection is required. The PIM tests interact with shared demo data; use an environment that is safe to modify if you change the target URL.
 

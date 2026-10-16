@@ -28,11 +28,13 @@ class HomePageLocators:
     }
     search_result={
         "xpath":
-            #"(//div[@role='rowgroup'])[2]//div[2]"
-            "//div[@role='table']//div[contains(text(),'0436')]//following::div[2][contains(text(),'Selva Bon')]"
+            "//div[@role='row' and .//div[@role='cell'][normalize-space()='{}']]"
     }
     add_emp_btn={
         "xpath":"//a[normalize-space()='Add Employee']"
+    }
+    emp_list_btn={
+        "xpath":"//a[normalize-space()='Employee List']"
     }
     first_name={
         "xpath":"//div//input[@name='firstName']"
@@ -48,4 +50,7 @@ class HomePageLocators:
     }
     dashboard={
         "xpath": "//h6[normalize-space()='Dashboard']"
+    }
+    personal_details={
+        "xpath": "//h6[normalize-space()='Personal Details']"
     }

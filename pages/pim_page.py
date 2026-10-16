@@ -1,24 +1,19 @@
-import time
+import random
 
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from locators.locators import LoginLocators, HomePageLocators
-from utilities.screenshot import Screenshot
+from locators.locators import HomePageLocators
 from utilities.logger import get_logger
-import random
-from selenium.webdriver.common.keys import Keys
 
 
-# 1. Generate a random name from a pre-defined list
-names_list = ["Alice", "Bob", "Charlie", "Diana", "Ethan","Shyam","Rahul","Kumar","Sharma","Ramesh","Suresh","Anita","Priya","Vikram","Amit","Singa","Roy","Kiran","Ravi","Nisha","Pooja"]
-random_f_name = random.choice(names_list)
-random_m_name = random.choice(names_list)
-random_l_name = random.choice(names_list)
-
-# 2. Generate a random integer between 1000 and 9999 (inclusive)
-random_number = random.randint(1000, 9999)
+NAMES = [
+    "Alice", "Bob", "Charlie", "Diana", "Ethan", "Shyam", "Rahul",
+    "Kumar", "Sharma", "Ramesh", "Suresh", "Anita", "Priya", "Vikram",
+    "Amit", "Singa", "Roy", "Kiran", "Ravi", "Nisha", "Pooja",
+]
 
 
 logger = get_logger(__name__)
@@ -31,19 +26,9 @@ class HRM_PIMPage:
         # Encapsulate the browser and this page's locator dependencies.
         self.driver = driver
         self.wait = WebDriverWait(driver, 30)
-        self.login_locators = LoginLocators()
         self.homepage_locators = HomePageLocators()
 
-    def search_user(self):
-        logger.info("Searching for user")
-        pim_ele = self.wait.until(EC.element_to_be_clickable((By.XPATH, self.homepage_locators.pim["xpath"])))
-        pim_ele.click()
-        self.driver.find_element(By.XPATH, self.homepage_locators.emp_id["xpath"]).send_keys("0436")
-        self.driver.find_element(By.XPATH, self.homepage_locators.search_btn["xpath"]).click()
-        assert self.driver.find_element(By.XPATH, self.homepage_locators.search_result["xpath"]).is_displayed(), "Search result not found"
-        logger.info("User search completed")
-
-    def create_user(self):
+    def create_user(self) -> str:
         logger.info("Creating a new user")
         pim_ele = self.wait.until(EC.element_to_be_clickable((By.XPATH, self.homepage_locators.pim["xpath"])))
         pim_ele.click()
@@ -53,13 +38,27 @@ class HRM_PIMPage:
             )
         )
         add_employee.click()
-        self.driver.find_element(By.XPATH, self.homepage_locators.first_name["xpath"]).send_keys({random_f_name})
-        self.driver.find_element(By.XPATH, self.homepage_locators.middle_name["xpath"]).send_keys({random_m_name})
-        self.driver.find_element(By.XPATH, self.homepage_locators.last_name["xpath"]).send_keys({random_l_name})
-        #self.driver.find_element(By.XPATH, self.homepage_locators.emp_id["xpath"]).clear()
-        self.driver.find_element(By.XPATH, self.homepage_locators.emp_id["xpath"]).send_keys(Keys.CONTROL, "a")
-        self.driver.find_element(By.XPATH, self.homepage_locators.emp_id["xpath"]).send_keys(Keys.DELETE)
-        self.driver.find_element(By.XPATH, self.homepage_locators.emp_id["xpath"]).send_keys(str(random_number))
+        for locator, value in (
+            (self.homepage_locators.first_name, random.choice(NAMES)),
+            (self.homepage_locators.middle_name, random.choice(NAMES)),
+            (self.homepage_locators.last_name, random.choice(NAMES)),
+        ):
+            self.wait.until(
+                EC.visibility_of_element_located((By.XPATH, locator["xpath"]))
+            ).send_keys(value)
+
+        emp_id = str(random.randint(1000, 9999))
+        employee_id_field = self.wait.until(
+            EC.visibility_of_element_located(
+                (By.XPATH, self.homepage_locators.emp_id["xpath"])
+            )
+        )
+        employee_id_field.send_keys(Keys.CONTROL, "a")
+        employee_id_field.send_keys(Keys.DELETE)
+        employee_id_field.send_keys(emp_id)
+        entered_emp_id = employee_id_field.get_attribute("value")
+        if not entered_emp_id:
+            raise AssertionError("Employee ID was not entered in the Add Employee form")
         self.wait.until(
             EC.invisibility_of_element_located(
                 (
@@ -74,5 +73,59 @@ class HRM_PIMPage:
             )
         )
         save_button.click()
-        # Add more steps to fill in the user details and submit the form
-        logger.info("New user created successfully")
+        self.wait.until(
+            EC.visibility_of_element_located(
+                (By.XPATH, self.homepage_locators.personal_details["xpath"])
+            )
+        )
+        logger.info("New user created with Employee ID: %s", entered_emp_id)
+        return entered_emp_id
+
+    def search_user(self, emp_id: str) -> None:
+        if not emp_id:
+            raise ValueError("Employee ID must not be empty")
+
+        logger.info("Searching for employee ID: %s", emp_id)
+        pim_ele = self.wait.until(
+            EC.element_to_be_clickable(
+                (By.XPATH, self.homepage_locators.pim["xpath"])
+            )
+        )
+        pim_ele.click()
+        employee_list = self.wait.until(
+            EC.element_to_be_clickable(
+                (By.XPATH, self.homepage_locators.emp_list_btn["xpath"])
+            )
+        )
+        employee_list.click()
+
+        employee_id_field = self.wait.until(
+            EC.visibility_of_element_located(
+                (By.XPATH, self.homepage_locators.emp_id["xpath"])
+            )
+        )
+        employee_id_field.send_keys(Keys.CONTROL, "a")
+        employee_id_field.send_keys(Keys.DELETE)
+        employee_id_field.send_keys(emp_id)
+
+        self.wait.until(
+            EC.invisibility_of_element_located(
+                (
+                    By.CSS_SELECTOR,
+                    self.homepage_locators.form_loader["css_selector"],
+                )
+            )
+        )
+        search_button = self.wait.until(
+            EC.element_to_be_clickable(
+                (By.XPATH, self.homepage_locators.search_btn["xpath"])
+            )
+        )
+        search_button.click()
+
+        result_locator = (
+            By.XPATH,
+            self.homepage_locators.search_result["xpath"].format(emp_id),
+        )
+        self.wait.until(EC.visibility_of_element_located(result_locator))
+        logger.info("Found employee with ID: %s", emp_id)

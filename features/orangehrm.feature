@@ -19,13 +19,8 @@ Feature: OrangeHRM login and employee management
       | user1   |
       | user2   |
 
-  Scenario: Find an existing employee by employee ID
+  Scenario: Create an employee and find it using its generated ID
     Given I am logged in to OrangeHRM
-    When I search for employee ID "0304" in PIM
-    Then the matching employee is displayed in the search results
-
-  Scenario: Create a new employee
-    Given I am logged in to OrangeHRM
-    When I open PIM and choose Add Employee
-    And I enter generated employee details and save the form
-    Then the new employee record is saved
+    When I create an employee with generated details and retain its employee ID
+    And I search using the returned employee ID
+    Then the created employee is displayed in the search results
